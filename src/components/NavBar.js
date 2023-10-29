@@ -17,8 +17,8 @@ const selectStyles = {
 
 function NavBar() {
     const projects = [
-        { id: 1, name: 'Project 1' },
-        { id: 2, name: 'Project 2' },
+        { id: 1, name: 'Site C Dam' },
+        { id: 2, name: 'Trans Mountain Pipeline' },
         // Add more projects
     ];
 
@@ -31,9 +31,6 @@ function NavBar() {
                     </Link>
                 </Typography>
                 <Select label="Projects" variant="outlined" sx={selectStyles}>
-                    <MenuItem value="">
-                        <em>None</em>
-                    </MenuItem>
                     {projects.map((project) => (
                         <MenuItem key={project.id} value={project.name}>
                             <Link to={`/project/${project.id}`} style={{ color: 'inherit', textDecoration: 'none' }}>

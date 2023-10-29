@@ -2,9 +2,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import ProjectDashboard from './components/ProjectDashboard';
 import LandingPage from './components/LandingPage';
-import AboutPage from './components/AboutPage'; // Import the AboutPage component
+import AboutPage from './components/AboutPage';
+import CustomProjectDashboard from './components/CustomProjectDashboard'; // Import the new component
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
       <div>
         <NavBar />
         <Routes>
-          <Route path="/project/:id" element={<ProjectDashboard />} />
-          <Route path="/about" element={<AboutPage />} /> {/* Route for the About page */}
+          <Route path="/project/:id" element={<CustomProjectDashboard />} /> {/* Use CustomProjectDashboard for project pages */}
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/" element={<LandingPage />} />
         </Routes>
       </div>
